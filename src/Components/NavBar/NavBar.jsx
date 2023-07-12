@@ -17,7 +17,7 @@ const NavBar = () => {
           {watchList.length}
         </span>
       </Link>
-      <Link to='details' className="text-lg">
+      <Link to="/details" className="text-lg">
         <i className="fas fa-user mr-2"></i> {username}
       </Link>
     </div>

@@ -24,9 +24,12 @@ const MovieSlice = createSlice({
       );
     },
     login: (state, action) => {
-      state.user=action.payload
+      state.user = action.payload;
+    },
+    logout: (state) => {
+      state.user +=initialState
     },
   },
 });
 export default MovieSlice.reducer;
-export const { addMovie, removeMovie ,login} = MovieSlice.actions;
+export const { addMovie, removeMovie, login ,logout} = MovieSlice.actions;
