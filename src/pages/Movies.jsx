@@ -16,7 +16,7 @@ const Movies = ({ movieData }) => {
           >
             <img
               src={ImageUrl + data.poster_path}
-              alt={data.original_title}
+              alt={data.original_title ? data.original_title : data.title}
               className="w-full h-auto rounded-lg mb-2"
             />
             <h5 className="text-center ">{data.original_title}</h5>

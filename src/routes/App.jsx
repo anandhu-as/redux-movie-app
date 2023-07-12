@@ -3,22 +3,54 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import NavBar from "../Components/NavBar/NavBar";
 import Home from "../Components/Home/Home";
 import WatchList from "../Components/WatchList/WatchList";
-import About from "../pages/About";
 import Loader from "../Components/Loader/Loader";
-const MovieLoader=Loader(Home)
+import Login from "../Components/Login/Login";
+import RequiredAuth from "../Components/Login/RequiredAuth";
+import UserDetail from "../pages/UserDetail";
+import { useSelector } from "react-redux";
+const MovieLoader = Loader(Home);
 const App = () => {
+  const { username } = useSelector((state) => state.movies.user);
   return (
     <div>
       <BrowserRouter>
-        <NavBar />
         <Routes>
-          <Route path="/" element={<MovieLoader/>} />
-          <Route path="/watchlist" element={<WatchList />} />
-          <Route path="/about" element={<About/>}/>
+          <Route
+            path="/home"
+            element={
+              <RequiredAuth>
+                <div>
+                  <NavBar />
+                  <MovieLoader />
+                </div>
+              </RequiredAuth>
+            }
+          />
+          <Route
+            path="/watchlist"
+            element={
+              <RequiredAuth>
+                <div>
+                  <NavBar />
+                  <WatchList />
+                </div>
+              </RequiredAuth>
+            }
+          />
+
+          <Route
+            path="/details"
+            element={
+              <div>
+                <NavBar />
+                <UserDetail />
+              </div>
+            }
+          />
+          <Route path="/" element={<Login />} />
         </Routes>
       </BrowserRouter>
     </div>
   );
 };
-
 export default App;

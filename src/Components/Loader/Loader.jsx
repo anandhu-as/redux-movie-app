@@ -5,7 +5,7 @@ const Loader = (UpdatedComponent) => {
     const [loading, setLoading] = useState(true);
     setTimeout(() => {
       setLoading(false);
-    }, 4000);
+    }, 3000);
     return (
       <div>
         {loading ? (

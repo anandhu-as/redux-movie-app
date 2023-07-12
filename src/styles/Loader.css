@@ -2,8 +2,18 @@ svg {
   width: 3.25em;
   transform-origin: center;
   animation: rotate4 2s linear infinite;
-  margin-top: 300px;   
-  margin-left: 640px;
+  margin-top: 300px;
+  margin-left: 680px;
+}
+.login {
+  margin-top: 160px;
+  margin-left: 550px;
+}
+.login input {
+  margin-top: 20px;
+}
+.login button {
+  margin-top: 15px;
 }
 
 circle {
