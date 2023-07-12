@@ -41,10 +41,12 @@ const App = () => {
           <Route
             path="/details"
             element={
-              <div>
-                <NavBar />
-                <UserDetail />
-              </div>
+              <RequiredAuth>
+                <div>
+                  <NavBar />
+                  <UserDetail />
+                </div>
+              </RequiredAuth>
             }
           />
           <Route path="/" element={<Login />} />

@@ -1,12 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { movies } from "../../../MovieData/Data";
-
 const initialState = {
   movieData: movies,
   watchList: [],
   user: { email: "", username: "" },
 };
-
 const MovieSlice = createSlice({
   name: "movies",
   initialState: initialState,
@@ -27,9 +25,9 @@ const MovieSlice = createSlice({
       state.user = action.payload;
     },
     logout: (state) => {
-      state.user +=initialState
+      state.user += initialState;
     },
   },
 });
 export default MovieSlice.reducer;
-export const { addMovie, removeMovie, login ,logout} = MovieSlice.actions;
+export const { addMovie, removeMovie, login, logout } = MovieSlice.actions;

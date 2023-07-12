@@ -19,9 +19,9 @@ const UserDetail = () => {
         <h2 className="text-lg text-gray-500">{email}</h2>
         <button
           className="bg-blue-500 text-white py-2 px-4 rounded mt-6"
-          onClick={()=>dispatch(logout())}
+          onClick={() => dispatch(logout())}
         >
-         <Link to='/'> Logout</Link>
+          <Link to="/"> Logout</Link>
         </button>
       </div>
     </div>

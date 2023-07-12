@@ -1,7 +1,7 @@
 svg {
   width: 3.25em;
   transform-origin: center;
-  animation: rotate4 2s linear infinite;
+  animation: rotate4 1s linear infinite;
   margin-top: 300px;
   margin-left: 680px;
 }
