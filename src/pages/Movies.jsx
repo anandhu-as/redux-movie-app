@@ -15,9 +15,11 @@ const Movies = ({ movieData }) => {
             <img
               src={ImageUrl + data.poster_path}
               alt={data.original_title ? data.original_title : data.title}
-              className="w-full h-auto rounded-lg mb-2 "
+              className="w-full h-auto rounded-lg mb-2 cursor-pointer "
             />
-            <h5 className="text-center ">{data.original_title}</h5>
+            <h5 className="text-center ">
+              {data.title ? data.title : data.original_title}
+            </h5>
             <button
               className="px-4 py-2 mt-auto  text-white bg-blue-500 rounded-md hover:bg-red-600"
               onClick={() => dispatch(addMovie({ data: data }))}

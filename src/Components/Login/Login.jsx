@@ -62,7 +62,7 @@ const Login = () => {
             onChange={(e) => setusername(e.target.value)}
             className="w-full bg-gray-200 text-black py-2 px-4 rounded ml-2 outline-none"
           />
-          
+
           <div className="text-red-500 mt-1">{usernameError}</div>
         </div>
         <button

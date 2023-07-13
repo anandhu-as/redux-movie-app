@@ -10,13 +10,13 @@ const NavBar = () => {
       <Link to="/home" className="text-xl font-bold">
         <i className="fas fa-home mr-2"></i> Home
       </Link>
-      <Link to="/watchlist" className="flex items-center ml-6 font-bold">
+      <Link to="/watchlist" className="flex items-center ml-6 font-bold ">
         WatchList{" "}
         <span className="bg-red-400 text-white rounded-full px-2 py-1 ml-2">
           {watchList.length}
         </span>
       </Link>
-      <Link to="/details" className="text-lg">
+      <Link to="/details" className="text-lg font-bold">
         <i className="fas fa-user mr-2"></i> {username}
       </Link>
     </div>
