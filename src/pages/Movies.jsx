@@ -27,10 +27,10 @@ const Movies = ({ movieData }) => {
               {data.title ? data.title : data.original_title}
             </h5>
             <button
-              className="px-4 py-2 mt-auto text-white bg-slate-500 rounded-md hover:bg-red-600"
+              className="px-4 py-2 mt-auto text-white bg-slate-500 rounded-md hover:bg-blue-600"
               onClick={() => handleAddToWatchlist(data)}
             >
-              Add to Watchlist
+              Add to Watchlist <i className="fa-solid fa-plus"></i>
             </button>
           </div>
         );

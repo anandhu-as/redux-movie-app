@@ -10,7 +10,7 @@ const WatchList = () => {
     <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4 ml-5 mt-32">
       {watchList.map((data) => {
         return (
-          <div key={data.id} className="flex flex-col items-center border">
+          <div key={data.id} className="flex flex-col items-center ">
             <img
               src={ImageUrl + data.poster_path}
               alt={data.title}
