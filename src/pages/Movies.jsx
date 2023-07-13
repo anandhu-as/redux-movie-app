@@ -3,7 +3,6 @@ import { ImageUrl } from "../Constants/url";
 import { useDispatch } from "react-redux";
 import { addMovie } from "../Redux/features/movie/MovieSlice";
 import MovieDetail from "./MovieDetail";
-
 const Movies = ({ movieData }) => {
   const dispatch = useDispatch();
   const [selectedMovie, setSelectedMovie] = useState(null);

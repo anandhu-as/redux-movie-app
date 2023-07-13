@@ -14,6 +14,14 @@ const MovieDetail = ({ selectedMovie, setSelectedMovie }) => {
             ? selectedMovie.title
             : selectedMovie.original_title}
         </h2>
+        <h2 className="text-white">{selectedMovie.media_type}</h2>
+        <h2 className="text-white">
+          language : {selectedMovie.original_language}
+        </h2>
+        <h2 className="text-white">
+          release date : {selectedMovie.release_date}
+        </h2>{" "}
+        <br />
         <p className="text-white">{selectedMovie.overview}</p>
         <button
           className="px-4 py-2 mt-4 text-white bg-slate-500 rounded-md hover:bg-blue-600"

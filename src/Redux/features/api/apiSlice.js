@@ -13,4 +13,3 @@ export const movieApi = createApi({
   }),
 });
 export const { useGetAllMoviesQuery } = movieApi*/
-

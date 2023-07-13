@@ -11,7 +11,7 @@ const NavBar = () => {
         <i className="fas fa-home mr-2"></i> Home
       </Link>
       <Link to="/watchlist" className="flex items-center ml-6 font-bold ">
-        WatchList{" "}
+        WatchList <i class="fa-solid fa-bookmark ml-3"></i>
         <span className="bg-red-400 text-white rounded-full px-2 py-1 ml-2">
           {watchList.length}
         </span>

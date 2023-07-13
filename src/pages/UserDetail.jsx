@@ -17,7 +17,7 @@ const UserDetail = () => {
         <h2 className="text-lg text-white">{email}</h2>
         <h2 className="text-white">
           {watchList.length == 0
-            ? "no movies on watchlist"
+            ? `${username} added no movies on watchlist`
             : `${username} added ${watchList.length} movies on watchList`}
         </h2>
         <button
