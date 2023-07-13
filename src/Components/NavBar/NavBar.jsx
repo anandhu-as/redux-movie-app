@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const NavBar = () => {
-  const { username } = useSelector((state) => state.movies.user);
+  const { username } = useSelector((state) => state.login.user);
   const { watchList } = useSelector((state) => state.movies);
   return (
     <div className="flex justify-between items-center bg-blue-500 text-white py-4 px-6 fixed top-0 left-0 right-0">

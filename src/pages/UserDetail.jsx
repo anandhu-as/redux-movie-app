@@ -1,10 +1,11 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { logout } from "../Redux/features/movie/MovieSlice";
+
 import { Link } from "react-router-dom";
+import { logout } from "../Redux/features/login/LoginSlice";
 
 const UserDetail = () => {
-  const { username, email } = useSelector((state) => state.movies.user);
+  const { username, email } = useSelector((state) => state.login.user);
   const dispatch = useDispatch();
 
   return (

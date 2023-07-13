@@ -7,10 +7,8 @@ import Loader from "../Components/Loader/Loader";
 import Login from "../Components/Login/Login";
 import RequiredAuth from "../Components/Login/RequiredAuth";
 import UserDetail from "../pages/UserDetail";
-import { useSelector } from "react-redux";
 const MovieLoader = Loader(Home);
 const App = () => {
-  const { username } = useSelector((state) => state.movies.user);
   return (
     <div>
       <BrowserRouter>

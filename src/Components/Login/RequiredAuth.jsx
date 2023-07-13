@@ -3,7 +3,7 @@ import { Navigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const RequiredAuth = ({ children }) => {
-  const { email } = useSelector((state) => state.movies.user);
+  const { email } = useSelector((state) => state.login.user);
   if (!email) {
     return <Navigate to="/" />;
     {

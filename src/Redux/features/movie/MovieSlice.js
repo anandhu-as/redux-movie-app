@@ -3,7 +3,6 @@ import { movies } from "../../../MovieData/Data";
 const initialState = {
   movieData: movies,
   watchList: [],
-  user: { email: "", username: "" },
 };
 const MovieSlice = createSlice({
   name: "movies",
@@ -21,13 +20,7 @@ const MovieSlice = createSlice({
         (item) => item.id !== action.payload
       );
     },
-    login: (state, action) => {
-      state.user = action.payload;
-    },
-    logout: (state) => {
-      state.user += initialState;
-    },
   },
 });
 export default MovieSlice.reducer;
-export const { addMovie, removeMovie, login, logout } = MovieSlice.actions;
+export const { addMovie, removeMovie } = MovieSlice.actions;
