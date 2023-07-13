@@ -11,6 +11,7 @@ const WatchList = () => {
       {watchList.map((data) => {
         return (
           <div key={data.id} className="flex flex-col items-center border">
+           
             <img
               src={ImageUrl + data.poster_path}
               alt={data.title}
