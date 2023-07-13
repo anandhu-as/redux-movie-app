@@ -8,7 +8,7 @@ import Login from "../Components/Login/Login";
 import RequiredAuth from "../Components/Login/RequiredAuth";
 import UserDetail from "../pages/UserDetail";
 const MovieLoader = Loader(Home);
-const LoginLoader=Loader(Login)
+const LoginLoader = Loader(Login);
 const App = () => {
   return (
     <div>
@@ -48,7 +48,7 @@ const App = () => {
               </RequiredAuth>
             }
           />
-          <Route path="/" element={<LoginLoader/>} />
+          <Route path="/" element={<LoginLoader />} />
         </Routes>
       </BrowserRouter>
     </div>
