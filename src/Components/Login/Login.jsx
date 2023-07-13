@@ -27,7 +27,7 @@ const Login = () => {
 
   return (
     <div
-      className="flex justify-center items-center min-h-screen bg-cover bg-center"
+      className="flex justify-center items-center min-h-screen bg-cover bg-center "
       style={{
         backgroundImage: `url("https://help.nflxext.com/0af6ce3e-b27a-4722-a5f0-e32af4df3045_what_is_netflix_5_en.png")`,
       }}

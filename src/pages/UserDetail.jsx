@@ -12,15 +12,13 @@ const UserDetail = () => {
   return (
     <div className="flex flex-col items-center justify-center h-screen">
       <div className="text-center">
-        <img
-          src="https://icons.veryicon.com/png/o/internet--web/prejudice/user-128.png"
-          alt=""
-          className="w-24 h-24 mx-auto mb-4"
-        />
-        <h1 className="text-2xl font-bold">{username}</h1>
-        <h2 className="text-lg text-gray-500">{email}</h2>
-        <h2>
-          {username} added {watchList.length} movies on watchList
+        <i className="fas fa-user text-white" style={{ fontSize: "2rem" }}></i>
+        <h1 className="text-2xl font-bold text-white">{username}</h1>
+        <h2 className="text-lg text-white">{email}</h2>
+        <h2 className="text-white">
+          {watchList.length == 0
+            ? "no movies on watchlist"
+            : `${username} added ${watchList.length} movies on watchList`}
         </h2>
         <button
           className="bg-blue-500 text-white py-2 px-4 rounded mt-6"

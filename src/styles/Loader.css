@@ -15,6 +15,14 @@ svg {
 .login button {
   margin-top: 15px;
 }
+.movie-card {
+  transition: transform 0.3s;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
 
 circle {
   fill: none;

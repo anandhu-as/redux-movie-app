@@ -10,7 +10,6 @@ const LoginSlice = createSlice({
     login: (state, action) => {
       state.user = action.payload;
     },
-  
   },
 });
 export default LoginSlice.reducer;

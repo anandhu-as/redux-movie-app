@@ -22,9 +22,9 @@ const MovieSlice = createSlice({
     },
     logout: (state) => {
       state.user += initialState;
-      state.watchList=[]
+      state.watchList = [];
     },
   },
 });
 export default MovieSlice.reducer;
-export const { addMovie, removeMovie ,logout} = MovieSlice.actions;
+export const { addMovie, removeMovie, logout } = MovieSlice.actions;

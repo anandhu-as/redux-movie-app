@@ -11,7 +11,6 @@ const WatchList = () => {
       {watchList.map((data) => {
         return (
           <div key={data.id} className="flex flex-col items-center border">
-           
             <img
               src={ImageUrl + data.poster_path}
               alt={data.title}
@@ -23,10 +22,10 @@ const WatchList = () => {
             >
               Remove
             </button>
-            <h5 className="text-lg font-bold mt-2">{data.title}</h5>
-            <h4 className="text-gray-600">Type: {data.media_type}</h4>
-            <h6 className="text-gray-600">Release Date: {data.release_date}</h6>
-            <p className="text-gray-700">{data.overview}</p>
+            <h5 className="text-white font-bold mt-2">{data.title}</h5>
+            <h4 className="text-white">Type: {data.media_type}</h4>
+            <h6 className="text-white">Release Date: {data.release_date}</h6>
+            <p className="text-white">{data.overview}</p>
           </div>
         );
       })}
