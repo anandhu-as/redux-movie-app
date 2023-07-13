@@ -20,7 +20,11 @@ const MovieSlice = createSlice({
         (item) => item.id !== action.payload
       );
     },
+    logout: (state) => {
+      state.user += initialState;
+      state.watchList=[]
+    },
   },
 });
 export default MovieSlice.reducer;
-export const { addMovie, removeMovie } = MovieSlice.actions;
+export const { addMovie, removeMovie ,logout} = MovieSlice.actions;

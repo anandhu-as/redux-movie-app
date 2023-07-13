@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { Link } from "react-router-dom";
-import { logout } from "../Redux/features/login/LoginSlice";
+import { logout } from "../Redux/features/movie/MovieSlice";
 
 const UserDetail = () => {
   const { username, email } = useSelector((state) => state.login.user);
