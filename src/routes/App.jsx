@@ -7,6 +7,7 @@ import Loader from "../Components/Loader/Loader";
 import Login from "../Components/Login/Login";
 import RequiredAuth from "../Components/Login/RequiredAuth";
 import UserDetail from "../pages/UserDetail";
+import Liked from "../Components/Liked/Liked";
 const MovieLoader = Loader(Home); // higher order components
 const LoginLoader = Loader(Login); //
 const App = () => {
@@ -50,6 +51,12 @@ const App = () => {
               </RequiredAuth>
             }
           />
+          <Route path="/liked" element={<RequiredAuth>
+                <div>
+                  <NavBar />
+                  <Liked/>
+                </div>
+              </RequiredAuth>}/>
           <Route path="/" element={<LoginLoader />} />
         </Routes>
       </BrowserRouter>

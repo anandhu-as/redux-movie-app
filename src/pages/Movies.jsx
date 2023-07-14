@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ImageUrl } from "../Constants/url";
 import { useDispatch } from "react-redux";
-import { addMovie } from "../Redux/features/movie/MovieSlice";
+import { addMovie, liked } from "../Redux/features/movie/MovieSlice";
 import MovieDetail from "./MovieDetail";
 const Movies = ({ movieData }) => {
   const dispatch = useDispatch();
@@ -27,6 +27,10 @@ const Movies = ({ movieData }) => {
             <h5 className="text-center text-white">
               {data.title ? data.title : data.original_title}
             </h5>
+            <i
+              className="fa-solid fa-heart px-4 py-2 mt-auto text-white w-8 h-8  hover:text-red-500 cursor-pointer"
+              onClick={() => dispatch(liked(data))}
+            ></i>
             <button
               className="px-4 py-2 mt-auto text-white bg-slate-500 rounded-md hover:bg-blue-600 animate-pulse"
               onClick={() => handleAddToWatchlist(data)}
