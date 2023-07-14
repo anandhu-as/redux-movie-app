@@ -22,9 +22,9 @@ const MovieSlice = createSlice({
       );
     },
     liked: (state, action) => {
-      const {data}=action.payload
+      const { data } = action.payload;
       const items = state.liked.find((item) => item.id === data.id);
-      items ? "" : state.liked.push(data);
+      items ? alert("you already liked this movie") : state.liked.push(data);
     },
     logout: (state) => {
       state.user += initialState;
