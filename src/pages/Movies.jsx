@@ -8,6 +8,9 @@ const Movies = ({ movieData }) => {
   const [selectedMovie, setSelectedMovie] = useState(null);
   const handleAddToWatchlist = (data) => dispatch(addMovie({ data }));
   const handleMovieClick = (data) => setSelectedMovie(data);
+  const handleLike = (data) => {
+    dispatch(liked({ data }));
+  };
   return (
     <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
       {movieData.map((data) => {
@@ -28,8 +31,8 @@ const Movies = ({ movieData }) => {
               {data.title ? data.title : data.original_title}
             </h5>
             <i
-              className="fa-solid fa-heart px-4 py-2 mt-auto text-white w-8 h-8  hover:text-red-500 cursor-pointer"
-              onClick={() => dispatch(liked(data))}
+              className="fa-solid fa-heart px-4 py-2 mt-auto text-white w-8 h-8  cursor-pointer hover:text-red-600"
+              onClick={() => handleLike(data)}
             ></i>
             <button
               className="px-4 py-2 mt-auto text-white bg-slate-500 rounded-md hover:bg-blue-600 animate-pulse"

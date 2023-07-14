@@ -4,7 +4,6 @@ import { ImageUrl } from "../../Constants/url";
 
 const Liked = () => {
   const { liked } = useSelector((state) => state.movies);
-  console.log(liked);
   return (
     <div className="flex flex-wrap justify-center">
       {liked.map((data) => {
