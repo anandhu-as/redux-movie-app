@@ -8,9 +8,7 @@ const Movies = ({ movieData }) => {
   const [selectedMovie, setSelectedMovie] = useState(null);
   const handleAddToWatchlist = (data) => dispatch(addMovie({ data }));
   const handleMovieClick = (data) => setSelectedMovie(data);
-  const handleLike = (data) => {
-    dispatch(liked({ data }));
-  };
+  const handleLike = (data) => dispatch(liked({ data }));
   return (
     <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
       {movieData.map((data) => {
@@ -23,7 +21,7 @@ const Movies = ({ movieData }) => {
           >
             <img
               src={ImageUrl + data.poster_path}
-              alt={data.original_title ? data.original_title : data.title}
+              alt={data.title}
               className="w-full h-auto rounded-lg mb-2 cursor-pointer"
               onClick={() => handleMovieClick(data)}
             />

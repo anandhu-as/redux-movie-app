@@ -5,7 +5,7 @@ const initialState = {
   watchList: [],
   liked: [],
 };
-const MovieSlice = createSlice({
+const movieSlice = createSlice({
   name: "movies",
   initialState: initialState,
   reducers: {
@@ -32,5 +32,5 @@ const MovieSlice = createSlice({
     },
   },
 });
-export default MovieSlice.reducer;
-export const { addMovie, removeMovie, logout, liked } = MovieSlice.actions;
+export default movieSlice.reducer;
+export const { addMovie, removeMovie, logout, liked } = movieSlice.actions;
