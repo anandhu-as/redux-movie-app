@@ -15,13 +15,13 @@ const NavBar = () => {
         <Link to="/watchlist" className="ml-6 font-bold">
           WatchList
           <i className="fa-solid fa-bookmark ml-3"></i>
-          <span className=" text-white rounded-full px-2 py-1 ml-2">
+          <span className="text-white rounded-full px-2 py-1 ml-2">
             {watchList.length}
           </span>
         </Link>
         <Link to="/liked" className="ml-6 font-bold text-red-500">
           <i className="fa-solid fa-heart text-red-500 mr-1"></i> Liked
-          <span className=" text-red-500 rounded-full px-2 py-1 ml-2">
+          <span className="text-red-500 rounded-full px-2 py-1 ml-2">
             {liked.length}
           </span>
         </Link>

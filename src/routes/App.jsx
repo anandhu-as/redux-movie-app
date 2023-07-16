@@ -51,12 +51,17 @@ const App = () => {
               </RequiredAuth>
             }
           />
-          <Route path="/liked" element={<RequiredAuth>
+          <Route
+            path="/liked"
+            element={
+              <RequiredAuth>
                 <div>
                   <NavBar />
-                  <Liked/>
+                  <Liked />
                 </div>
-              </RequiredAuth>}/>
+              </RequiredAuth>
+            }
+          />
           <Route path="/" element={<LoginLoader />} />
         </Routes>
       </BrowserRouter>

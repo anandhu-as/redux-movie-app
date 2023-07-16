@@ -1,19 +1,25 @@
 import React, { useState } from "react";
 import { ImageUrl } from "../Constants/url";
 import { useDispatch } from "react-redux";
-import { addMovie, liked } from "../Redux/features/movie/MovieSlice";
+import { addMovie, liked, unlike } from "../Redux/features/movie/MovieSlice";
 import MovieDetail from "./MovieDetail";
+import { useSelector } from "react-redux";
 const Movies = ({ movieData }) => {
   const dispatch = useDispatch();
   const [selectedMovie, setSelectedMovie] = useState(null);
   const handleAddToWatchlist = (data) => dispatch(addMovie({ data }));
   const handleMovieClick = (data) => setSelectedMovie(data);
   const handleLike = (data) => dispatch(liked({ data }));
+
   return (
     <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
       {movieData.map((data) => {
         const isSelected = selectedMovie && selectedMovie.id === data.id;
         const blurClass = selectedMovie ? (isSelected ? "" : "blur") : "";
+        const isLiked = useSelector((state) =>
+          state.movies.liked.find((movie) => movie.id === data.id)
+        );
+
         return (
           <div
             key={data.id}
@@ -29,8 +35,11 @@ const Movies = ({ movieData }) => {
               {data.title ? data.title : data.original_title}
             </h5>
             <i
-              className="fa-solid fa-heart px-4 py-2 mt-auto text-white w-8 h-8  cursor-pointer hover:text-red-600"
+              className={`fa-solid fa-heart px-4 py-2 mt-auto text-white w-8 h-8 cursor-pointer ${
+                isLiked && "text-red-600"
+              }`}
               onClick={() => handleLike(data)}
+              onDoubleClick={()=>dispatch(unlike(data.id))}
             ></i>
             <button
               className="px-4 py-2 mt-auto text-white bg-slate-500 rounded-md hover:bg-blue-600 animate-pulse"
