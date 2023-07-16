@@ -24,15 +24,12 @@ const movieSlice = createSlice({
     },
     liked: (state, action) => {
       const { data } = action.payload;
-      const SameItems = state.liked.find((item) => item.id === data.id);
-      !SameItems && state.liked.push(data);
+      const items = state.liked.find((item) => item.id === data.id);
+      !items && state.liked.push(data);
     },
-    unlike: (state, action) => {
-      state.liked = state.liked.filter((item) => item.id !== action.payload);
-    },
-    logout: (state) => {
-      state.user += initialState;
-      state.watchList = [];
+    unliked: (state, action) => {
+      const { data } = action.payload;
+      state.liked = state.liked.filter((data) => data.id !== data.id);
     },
   },
 });
@@ -42,5 +39,5 @@ export const {
   removeMovie,
   logout,
   liked,
-  unlike,
+  unliked,
 } = movieSlice.actions;
